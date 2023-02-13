@@ -1,0 +1,140 @@
+body {
+    
+    background-image: url(/Cronicas-de-Adallyd/img/casita.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+
+.container-slider {
+    width: 30%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider {
+    display: flex;
+    width: 1900%;
+    height: 800px;
+    margin-left: -100%;
+    
+}
+.slider__section {
+    background: none;
+}
+.slider__img {
+    display: block;
+    width: 102%;
+    height: 90%;
+    object-fit: cover;
+}
+.slider__btn {
+position: absolute;
+ width: 40px;
+ height: 40px;
+ background: rgba(255,255,255,0.5);
+ top: 50%;
+ transform: translateY(-50%);
+font-size: 30px;
+font-weight: bold;
+font-family: monospace;
+text-align: center;
+border-radius: 50%;
+cursor: pointer;
+
+
+}
+.slider__btn:hover {
+    background: #FFF;
+}
+.slider__btn--left{
+    left: 10px;
+}
+.slider__btn--right {
+    right: 10px;
+}
+
+header {
+    width: 100%;
+    background: #273d23;
+    
+}
+
+#btn-menu {
+    display: none;
+
+}
+
+header label {
+    display: none;
+    width: 45px;
+    height: 40px;
+    padding: 10px;
+    border-right: 1px solid #000000;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    border-right: 1px solid #000000;
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+@media (max-width:768px) {
+
+    header label {
+        display: block;
+
+    }
+
+    .menu {
+        position: absolute;
+        background: #273d23;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-top: 1px solid #fff
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+}
